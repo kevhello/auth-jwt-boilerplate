@@ -11,7 +11,7 @@ module.exports = function(app){
     // If we want add any protected route, use 'requireAuth' middleware
     // in the second arg to the route.
     app.get('/', requireAuth, (req, res) => {
-        res.send({hi: 'there'})
+        res.send({message: 'there'})
     });
 
     app.post('/signin', requireSignin, Authentication.signin);
